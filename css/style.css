@@ -348,6 +348,10 @@ h6 {
   color: var(--block-color);
   background: var(--background);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-property: var(--background-color);
+  transition-duration: 1000ms;
+  transition-timing-function: linear;
 }
 
 /*---------Наши преимущества------- NEW -----------------------------*/
@@ -612,6 +616,10 @@ h6 {
 
 /* ================== ПОРТФОЛИО ===============*/
 /*--------------------контакты-----------------*/
+
+.close-btn-icon {
+  cursor: pointer;
+}
 .galery-link {
   display: block;
 }
@@ -836,22 +844,52 @@ h6 {
 }
 /*---------------------------------------------SCRIN--PORTFOLIO-9-*/
 
-/*
-.images-portfolio-item:hover .galery-overlay {
+.images-portfolio-item:hover .galery-top-overlay {
   opacity: 1;
 }
 
-.images-portfolio-item:hover .galery-overlay {
+.images-portfolio-item:hover .galery-top-overlay {
   position: absolute;
 }
 
-.images-portfolio-item:hover .galery-overlay {
+.images-portfolio-item:hover .galery-top-overlay {
   transform: translateY(0);
 }
 
+.galery-top-cards {
+  position: relative;
+  overflow: hidden;
+}
+.galery-top-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0s;
+}
+.galery-overlay-text {
+  position: absolute;
+}
 
-
-
+.galery-top-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  margin: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
 /*------------Контакты-----------*/
 .footer-text {
   font-style: normal;
@@ -910,6 +948,7 @@ h6 {
   transition: transform 300ms;
   transform: translate(-50%, -50%) scale(1) rotate(0);
 }
+
 .close-btn-icon {
   fill: #000000;
 }
